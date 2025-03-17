@@ -101,9 +101,9 @@ export const services: ServiceDetail[] = [
       "Optimización de rendimiento"
     ],
     images: [
-      "/work/10.png",
-      "/work/11.png",
-      "/work/12.png"
+      "/work/1.png",
+      "/work/2.png",
+      "/work/3.png"
     ],
     technicalSpecs: [
       { title: "Tipos de equipos", value: "Industrial, Comercial" },

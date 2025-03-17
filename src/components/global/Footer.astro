@@ -1,14 +1,42 @@
-<footer class="border-white/20  border-b bg-accent-500">
-  <div class="mx-auto border-white/20  border-x max-w-7xl">
-    <div class="mx-auto p-8 items-start justify-between w-full">
-      <div class="text-white text-center items-center mx-auto">
-        <p class="uppercase font-display text-2xl">Dormut</p>
-        <p class="mx-auto mt-3 text-sm">
-         <a
-            class="underline"
+<footer class="border-white/20 border-b bg-accent-500">
+  <div class="mx-auto border-white/20 border-x max-w-7xl">
+    <div class="mx-auto p-8">
+      <div class="text-white flex flex-col sm:flex-row justify-between items-start gap-8">
+        <!-- Left Column: Logo & Links -->
+        <div class="flex flex-col items-start">
+          <p class="uppercase font-display text-2xl mb-6">Dormut</p>
+          
+          <!-- Quick Links -->
+          <div class="flex flex-row gap-4 text-sm">
+            <a href="/" class="hover:text-accent-200 transition-colors" target="_blank">Inicio</a>
+            <a href="/#servicios" class="hover:text-accent-200 transition-colors" target="_blank">Servicios</a>
+            <a href="/servicios/soldadura" class="hover:text-accent-200 transition-colors" target="_blank">Soldadura</a>
+            <a href="/servicios/cnc" class="hover:text-accent-200 transition-colors" target="_blank">CNC</a>
+            <a href="/servicios/diseno-fabricacion" class="hover:text-accent-200 transition-colors" target="_blank">Diseño y Fabricación</a>
+            <a href="/servicios/reparacion" class="hover:text-accent-200 transition-colors" target="_blank">Reparación</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Info -->
+        <div class="flex flex-col items-start sm:items-end gap-4 text-sm">
+          <p class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Av. Industrial 1234, Zona Industrial
+          </p>
+          <p class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            +54 11 1234-5678
+          </p>
+          <a
+            class="underline hover:text-accent-200 transition-colors"
             href="https://www.instagram.com/dormut.mx/">Instagram</a
           >
-        </p>
+        </div>
       </div>
     </div>
   </div>
