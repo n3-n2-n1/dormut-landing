@@ -1,0 +1,49 @@
+---
+interface Testimonial {
+  text: string;
+  name: string;
+  role: string;
+  color: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    text: "La calidad de las soldaduras y la precisión en los cortes CNC superaron todas nuestras expectativas. El equipo demostró una experiencia excepcional en cada proyecto que realizamos juntos.",
+    name: "Carlos Ramírez",
+    role: "Director de Operaciones en MetalTech Industrial",
+    color: "text-[#ed642c]"
+  },
+  {
+    text: "Su capacidad para combinar soldadura y CNC nos permitió optimizar nuestros procesos de producción. La atención al detalle y la calidad del trabajo son impresionantes.",
+    name: "Ana Martínez",
+    role: "Gerente de Producción en Fabricaciones Pro",
+    color: "text-[#ed772f]"
+  },
+  {
+    text: "El servicio de mantenimiento y reparación que recibimos fue excepcional. Su conocimiento técnico y rapidez en la resolución de problemas nos ayudó a minimizar tiempos muertos.",
+    name: "Roberto Sánchez",
+    role: "Supervisor de Mantenimiento en Industrias Delta",
+    color: "text-[#ef9335]"
+  },
+  {
+    text: "La precisión en los cortes CNC y la calidad de las soldaduras nos permitieron reducir costos y mejorar la eficiencia de nuestros procesos. Un socio confiable para cualquier proyecto industrial.",
+    name: "María González",
+    role: "Directora de Calidad en Maquinaria Industrial SA",
+    color: "text-eagle"
+  }
+];
+---
+
+<div class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 mx-auto p-8 sm:grid-cols-2">
+  {testimonials.map((testimonial) => (
+    <div class="flex flex-col justify-between h-full">
+      <p class={testimonial.color}>
+        {testimonial.text}
+      </p>
+      <div class="mt-3">
+        <span class="block font-semibold mt-3">{testimonial.name}</span>
+        <span class="block text-eagle">{testimonial.role}</span>
+      </div>
+    </div>
+  ))}
+</div>

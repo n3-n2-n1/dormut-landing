@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /servicios/
+Allow: /contacto/
+Allow: /about/
+Allow: /sitemap.xml
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+Sitemap: https://dormut.com.ar/sitemap.xml 

@@ -1,0 +1,86 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import type { ServiceDetail } from "../data/services";
+import BaseLayout from "./BaseLayout.astro";
+import Cta from "../components/landing/Cta.astro";
+import Work from "../components/landing/Work.astro";
+interface Props {
+  service: ServiceDetail;
+}
+
+const { service } = Astro.props;
+---
+
+<BaseLayout>
+  <main class="min-h-screen bg-black text-white">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] overflow-hidden">
+      <img 
+        src={service.images[0]} 
+        alt={service.title}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <h1 class="text-4xl md:text-6xl font-display uppercase text-center">
+          {service.title}
+        </h1>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="prose prose-invert max-w-none">
+            <p class="text-xl mb-8">{service.longDescription}</p>
+            
+            <h2 class="text-2xl font-display uppercase mb-6">Características</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+              {service.features.map(feature => (
+                <li class="flex items-center gap-2">
+                  <svg class="w-5 h-5 text-eagle" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <h2 class="text-2xl font-display uppercase mb-6">Especificaciones Técnicas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {service.technicalSpecs.map(spec => (
+                <div class="bg-white/5 p-4 rounded-lg">
+                  <h3 class="font-semibold text-eagle">{spec.title}</h3>
+                  <p>{spec.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-8">
+            <div class="bg-white/5 p-6 rounded-lg">
+              <h2 class="text-xl font-display uppercase mb-4">¿Necesitas más información?</h2>
+              <p class="mb-6">Contáctanos para obtener un presupuesto personalizado o resolver cualquier duda sobre este servicio.</p>
+              <a 
+                href="/contacto" 
+                class="block w-full bg-eagle text-white text-center py-3 px-6 rounded-lg hover:bg-eagle/90 transition-colors"
+              >
+                Contactar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <Work />
+    </section>
+    <Cta />
+  </main>
+</BaseLayout>

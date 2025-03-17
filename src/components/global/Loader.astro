@@ -1,0 +1,35 @@
+<div id="loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-black transition-opacity duration-500">
+  <div class="flex flex-col items-center gap-4">
+    <img src="/logo.svg" alt="Dormut" class="w-16 h-16 animate-pulse" />
+    <div class="w-24 h-1 bg-white/20 rounded-full overflow-hidden">
+      <div class="h-full bg-orange animate-progress"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }, 1500);
+  });
+</script>
+
+<style>
+  @keyframes progress {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .animate-progress {
+    animation: progress 1.5s ease-in-out forwards;
+  }
+</style> 
